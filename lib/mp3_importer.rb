@@ -6,9 +6,11 @@ class MP3Importer
   end
 
   def files
-    path = MP3Importer.new('./db/mp3s').import
-    Dir.new(self.path)
-
+    files = []
+    Dir.new(self.path).each do |file|
+      files << file 
+    end 
+    files
   end
 
   def import
