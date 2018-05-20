@@ -6,11 +6,9 @@ class MP3Importer
   end
 
   def files
-    files = []
-    Dir.new(self.path).each do |file|
-      files << file if file.length > 4
-    end
-    files
+    path = MP3Importer.new('./db/mp3s').import
+    Dir.new(self.path)
+      
   end
 
   def import
