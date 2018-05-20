@@ -8,7 +8,7 @@ class MP3Importer
   def files
     path = MP3Importer.new('./db/mp3s').import
     Dir.new(self.path)
-      
+
   end
 
   def import
